@@ -1,0 +1,122 @@
+body {
+  padding: 20px;
+  margin: 0;
+}
+
+#map {
+  width: 100%;
+  height: 600px;
+}
+
+.leaflet-popup-content {
+  text-align: center;
+}
+
+#heading {
+  background-color: rgb(253, 253, 253);
+  background-image: url("../images/lines.jpg");
+  color: white;
+}
+
+/* CSS from the Leaflet-Choropleth documentation */
+.legend {
+  padding: 6px 8px;
+  font: 12px Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #555;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.legend ul {
+  padding: 0;
+  margin: 0;
+  clear: both;
+  list-style-type: none;
+}
+
+.legend li {
+  display: inline-block;
+  width: 30px;
+  height: 22px;
+}
+
+.legend .min {
+  float: left;
+  padding-bottom: 5px;
+}
+
+.legend .max {
+  float: right;
+}
+
+.leaflet-control-layers-base {
+  text-align: left;
+}
+
+#statename h2 {
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+#state-table {
+  padding-left: 160px;
+  color: white;
+  border: 4px solid white;
+  padding: 10px;
+  margin-left: 10px;
+  font-size: 15pt;
+}
+
+h3 {
+  color: white;
+}
+
+h4 {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #fff;
+    shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  stroke: white;
+}
+
+.line {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1.5px
+}
+
+.axis text{
+  fill:white;
+}  
+
+.active {
+  font-weight: bold;
+  fill: #000;
+  transition: fill 0.3s ease-out;
+  text-anchor: middle;
+}
+
+.inactive {
+  font-weight: lighter;
+  fill: #c9c9c9;
+  transition: fill 0.3s ease-out;
+  text-anchor: middle;
+}
+
+.inactive:hover {
+  fill: #000;
+  cursor: pointer;
+}

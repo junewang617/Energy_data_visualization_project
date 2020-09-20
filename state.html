@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>State Energy</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
+
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="index.html">Home</a>
+            <div class="navbar" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="renewables.html">Renewables <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div id="heading"><br>
+                    <h1><strong>State Energy Analysis</strong></h1><br>
+                </div>
+            </div>
+        </div>
+        <!-- create a container for the plots -->
+        <div class="container content-wrapper">
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- create a div for the dropdown menu -->
+                    <div class="well" id="statename">
+                        <!-- <h5>State: </h5> -->
+                        <select id="selDataset" onchange="stateChange(this.value)"></select>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <!-- create a div for the state summary -->
+                <div class="col-md-6">
+                    <div id="plot1">
+                        <canvas id="pieChart" width="400" height="400"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center"></div>
+                <div class="col-md-4">
+                    <h4>Summary</h4>
+                    <div id="state-table">
+                        <canvas id="state-summary" width="400" height="400"></canvas>
+                    </div>
+                </div>
+                <!-- create a div for the first plot -->
+                <!-- <div class="col-md-5">
+                    <div id="plot1">
+                        <canvas id="pieChart" width="400" height="400"></canvas>
+                    </div>
+                </div> -->
+            </div>
+            <hr>
+        </div>
+
+
+        <!-- Leaflet JS-->
+        <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
+        <!-- d3 JavaScript and chart.js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+        <!-- Leaflet-Choropleth JavaScript -->
+        <script type="text/javascript" src="static/js/choropleth.js"></script>
+
+        <!-- Our JS -->
+        <!-- <script type="text/javascript" src="static/js/config.js"></script> -->
+        <script type="text/javascript" src="static/js/statelogic.js"></script>
+        <!-- <script type="text/javascript" src="static/js/statedata.js"></script> -->
+
+</body>
+
+</html>
